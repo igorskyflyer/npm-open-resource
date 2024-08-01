@@ -41,6 +41,8 @@
 - [Features](#-features)
 - [Usage](#-usage)
 - [API](#-api)
+  - [openSync()](#opensyncresource-string-options-ioptions-void)
+  - [open()](#openresource-string-options-ioptions-promisevoid)
 - [Examples](#-examples)
 - [Changelog](#-changelog)
 - [License](#-license)
@@ -54,7 +56,7 @@
 
 - cross-platform for major OS (Windows, Linux, MacOS) using:
   - `start/Start-Process` for Windows
-  - `xdg-open` for Linux (either native or bundled)
+  - [`xdg-open`](https://gitlab.freedesktop.org/xdg/xdg-utils/-/blob/master/scripts/xdg-open.in) for Linux (either native or bundled)
   - `open` for MacOS
 - both sync and async methods
 - supports passing of arguments

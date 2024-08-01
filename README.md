@@ -125,8 +125,11 @@ Throws an error if no resource is specified, if the arguments are invalid, or an
 
 `example.mts`
 ```ts
-import {  } from '@igor.dvlpr/open-resource'
+import { openSync } from '@igor.dvlpr/open-resource'
 
+openSync('https://igorskyflyer.me') // will open the default browser and navigate to the site
+
+openSync('D:\\Data\\file.ext') // will open the text file in the default text viewer/editor
 ```
 
 ---

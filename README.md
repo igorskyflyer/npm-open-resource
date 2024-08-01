@@ -41,7 +41,7 @@
 - [Features](#-features)
 - [Usage](#-usage)
 - [API](#-api)
-- [IOptions](#ioptions)
+  - [IOptions](#ioptions)
   - [openSync()](#opensyncresource-string-options-ioptions-void)
   - [open()](#openresource-string-options-ioptions-promisevoid)
 - [Examples](#-examples)

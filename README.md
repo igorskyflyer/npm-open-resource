@@ -95,7 +95,7 @@ interface IOptions {
 
 ### `openSync(resource: string, options?: IOptions): void`
 
-*Opens a specified resource synchronously using the appropriate command for the current platform.*
+*Opens a specified resource **synchronously** using the appropriate command for the current platform.*
 
 `resource` - The resource to be opened, a path, URL, etc. Must be a non-empty string.  
 
@@ -109,7 +109,7 @@ Throws an error if no resource is specified, if the arguments are invalid, or an
 
 ### `open(resource: string, options?: IOptions): Promise<void>`
 
-*Opens a specified resource asynchronously using the appropriate command for the current platform.*
+*Opens a specified resource **asynchronously** using the appropriate command for the current platform.*
 
 `resource` - The resource to be opened, a path, URL, etc. Must be a non-empty string.  
 
@@ -156,7 +156,7 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 [@igor.dvlpr/regkeys](https://www.npmjs.com/package/@igor.dvlpr/regkeys)
 
-> _📚 An npm package for fetching Windows registry keys. 🗝_
+> _📚 An np*m package for fetching Windows registry keys. 🗝_
 
 <br>
 

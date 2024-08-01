@@ -55,9 +55,9 @@
 ## 🤖 Features
 
 - cross-platform for major OS (Windows, Linux, MacOS) using:
-  - `start/Start-Process` for Windows
+  - [`start`](https://ss64.com/nt/start.html)/[`Start-Process`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/start-process) for Windows
   - [`xdg-open`](https://gitlab.freedesktop.org/xdg/xdg-utils/-/blob/master/scripts/xdg-open.in) for Linux (either native or bundled)
-  - `open` for MacOS
+  - [`open`](https://ss64.com/mac/open.html) for MacOS
 - both sync and async methods
 - supports passing of arguments
 

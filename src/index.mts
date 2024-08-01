@@ -49,8 +49,13 @@ function applyOptions(options?: IOptions): IOptions {
 }
 
 /**
+ * Opens a specified resource synchronously using the appropriate command for the current platform.
  *
- * @param resource
+ * @param {string} resource - The resource to be opened. Must be a non-empty string.
+ * @param {IOptions} [options] - Optional configuration for the command execution.
+ * @param {string[]} [options.args] - Additional arguments to be passed to the open command.
+ * @param {'cmd' | 'powershell'} [options.msShell] - Shell to be used on Windows (either 'cmd' or 'powershell').
+ * @throws {Error} If no resource is specified, or if the arguments are invalid, or if an error occurs during execution.
  */
 export function openSync(resource: string, options?: IOptions): void {
   if (typeof resource !== 'string' || resource.length === 0) {
@@ -78,6 +83,13 @@ export function openSync(resource: string, options?: IOptions): void {
   }
 }
 
+/**
+ * Opens a specified resource asynchronously using the appropriate command for the current platform.
+ *
+ * @param {string} resource - The resource to be opened. Must be a non-empty string.
+ * @returns {Promise<void>} A promise that resolves when the resource is successfully opened.
+ * @throws {Error} If no resource is specified, or if an error occurs during the execution of `openSync`.
+ */
 export async function open(resource: string): Promise<void> {
   return Promise.resolve(openSync(resource))
 }

@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/dist/index.mjs",
+            "outFiles": ["${workspaceFolder}/dist/**/*.mjs"],
+            "preLaunchTask": "debug"
+        }
+    ]
+}

@@ -35,7 +35,7 @@ function getOpenCommand(options?: ICommandOptions): string {
         return 'powershell -Command Start-Process'
       }
 
-      return 'start "" /D'
+      return 'start'
     }
     case 'linux': {
       const tryXdg: ExecResult = executeSync('which xdg-open')

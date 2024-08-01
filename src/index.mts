@@ -33,10 +33,6 @@ function getOpenCommand(options?: ICommandOptions): string {
   switch (platform()) {
     case 'win32': {
       if (options?.msShell === 'powershell') {
-        const command: MagicString = new MagicString()
-
-        command.append('powershell').append('-Command').append('Start-Process')
-
         return 'powershell -Command Start-Process'
       }
 

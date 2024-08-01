@@ -148,25 +148,33 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 ## 🧬 Related
 
-[]()
+[@igor.dvlpr/registry-apppaths](https://www.npmjs.com/package/@igor.dvlpr/registry-apppaths)
 
-> __
+> _🪀 A Node.js module for reading the AppPaths registry key on Windows. Useful for retrieving applications that can be launched from the command prompt. 🗃_
 
-[]()
+<br>
 
-> __
+[@igor.dvlpr/regkeys](https://www.npmjs.com/package/@igor.dvlpr/regkeys)
 
-[]()
+> _📚 An npm package for fetching Windows registry keys. 🗝_
 
-> __
+<br>
 
-[]()
+[@igor.dvlpr/upath](https://www.npmjs.com/package/@igor.dvlpr/upath)
 
-> __
+> _🎍 Provides a universal way of formatting file-paths in Unix-like and Windows operating systems as an alternative to the built-in path.normalize(). 🧬_
 
-[]()
+<br>
 
-> __
+[@igor.dvlpr/windows-packages](https://www.npmjs.com/package/@igor.dvlpr/windows-packages)
+
+> _💻 A Node.js module for reading the Packages registry key on Windows 10+. Useful for retrieving Windows 10+ installed Store applications. 📦_
+
+<br>
+
+[@igor.dvlpr/scrollend-polyfill](https://www.npmjs.com/package/@igor.dvlpr/scrollend-polyfill)
+
+> _🛴 A performant and light (< 1.5KB) JavaScript polyfill for the scrollend Event. ⛸️_
 
 ---
 

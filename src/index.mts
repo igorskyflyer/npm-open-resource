@@ -6,10 +6,21 @@ import { type SpawnSyncReturns, spawnSync } from 'node:child_process'
 import { platform } from 'node:os'
 
 interface ICommandOptions {
+  /**
+   * Which shell to use for the command execution.
+   *
+   * Only available for Windows.
+   */
   msShell?: 'cmd' | 'powershell'
 }
 
+/**
+ * Configuration for the command execution.
+ */
 interface IOptions extends ICommandOptions {
+  /**
+   * Arguments to pass to the command.
+   */
   args?: string[]
 }
 
@@ -24,7 +35,7 @@ function getOpenCommand(options?: ICommandOptions): string {
         return 'powershell -Command Start-Process'
       }
 
-      return 'start'
+      return 'start "" /D'
     }
     case 'linux': {
       const tryXdg: ExecResult = executeSync('which xdg-open')
@@ -51,11 +62,9 @@ function applyOptions(options?: IOptions): IOptions {
 /**
  * Opens a specified resource synchronously using the appropriate command for the current platform.
  *
- * @param {string} resource - The resource to be opened. Must be a non-empty string.
- * @param {IOptions} [options] - Optional configuration for the command execution.
- * @param {string[]} [options.args] - Additional arguments to be passed to the open command.
- * @param {'cmd' | 'powershell'} [options.msShell] - Shell to be used on Windows (either 'cmd' or 'powershell').
- * @throws {Error} If no resource is specified, or if the arguments are invalid, or if an error occurs during execution.
+ * @param resource - The resource to be opened, a path, URL, etc. Must be a non-empty string.
+ * @param options - Optional configuration for the command execution.
+ * @throws Throws an error if no resource is specified, if the arguments are invalid, or an error occurs during execution.
  */
 export function openSync(resource: string, options?: IOptions): void {
   if (typeof resource !== 'string' || resource.length === 0) {
@@ -86,10 +95,10 @@ export function openSync(resource: string, options?: IOptions): void {
 /**
  * Opens a specified resource asynchronously using the appropriate command for the current platform.
  *
- * @param {string} resource - The resource to be opened. Must be a non-empty string.
- * @returns {Promise<void>} A promise that resolves when the resource is successfully opened.
- * @throws {Error} If no resource is specified, or if an error occurs during the execution of `openSync`.
+ * @param resource - The resource to be opened, a path, URL, etc. Must be a non-empty string.
+ * @param options - Optional configuration for the command execution.
+ * @throws Throws an error if no resource is specified, if the arguments are invalid, or an error occurs during execution.
  */
 export async function open(resource: string): Promise<void> {
-  return Promise.resolve(openSync(resource))
+  Promise.resolve(openSync(resource))
 }

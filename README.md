@@ -73,6 +73,49 @@ npm i '@igor.dvlpr/open-resource'
 
 ## 🤹🏼 API
 
+An options object can be passed to the `open()` functions, it being described by the interface `IOptions` as follows:
+
+```ts
+interface IOptions {
+  args?: string[]
+  msShell?: 'cmd' | 'powershell'
+}
+```
+
+`args` - The arguments to pass to the command.  
+
+`msShell` - The shell to use for the command execution. Only available on Windows.
+
+<br>
+
+<br>
+
+### `openSync(resource: string, options?: IOptions): void`
+
+*Opens a specified resource synchronously using the appropriate command for the current platform.*
+
+`resource` - The resource to be opened, a path, URL, etc. Must be a non-empty string.  
+
+`options` - Optional configuration for the command execution.
+
+<br>
+
+Throws an error if no resource is specified, if the arguments are invalid, or an error occurs during execution.
+
+---
+
+### `open(resource: string, options?: IOptions): Promise<void>`
+
+*Opens a specified resource asynchronously using the appropriate command for the current platform.*
+
+`resource` - The resource to be opened, a path, URL, etc. Must be a non-empty string.  
+
+`options` - Optional configuration for the command execution.
+
+<br>
+
+Throws an error if no resource is specified, if the arguments are invalid, or an error occurs during execution.
+
 ---
 
 ## ✨ Examples

@@ -78,7 +78,7 @@ npm i '@igor.dvlpr/open-resource'
 
 An options object can be passed to the `open()` functions, it being described by the interface `IOptions` as follows:
 
-### IOptions
+### `IOptions`
 
 ```ts
 interface IOptions {

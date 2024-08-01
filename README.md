@@ -129,7 +129,7 @@ import { openSync } from '@igor.dvlpr/open-resource'
 
 openSync('https://igorskyflyer.me') // will open the default browser and navigate to the site
 
-openSync('D:\\Data\\file.ext') // will open the text file in the default text viewer/editor
+openSync('D:\\Data\\file.txt') // will open the text file in the default text viewer/editor
 ```
 
 ---

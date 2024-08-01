@@ -38,6 +38,7 @@
 
 ## 📃 Table of contents
 
+- [Features](#-features)
 - [Usage](#-usage)
 - [API](#-api)
 - [Examples](#-examples)
@@ -49,6 +50,17 @@
 <br>
 <br>
 
+## 🤖 Features
+
+- cross-platform for major OS (Windows, Linux, MacOS)
+  - `start/Start-Process` for Windows
+  - `xdg-open` for Linux (either native or bundled)
+  - `open` for MacOS
+- both sync and async methods
+- supports passing of arguments
+
+---
+
 ## 🕵🏼 Usage
 
 Install it by executing:
@@ -57,7 +69,7 @@ Install it by executing:
 npm i '@igor.dvlpr/open-resource'
 ```
 
-<br>
+---
 
 ## 🤹🏼 API
 

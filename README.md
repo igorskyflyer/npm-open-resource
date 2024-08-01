@@ -52,7 +52,7 @@
 
 ## 🤖 Features
 
-- cross-platform for major OS (Windows, Linux, MacOS)
+- cross-platform for major OS (Windows, Linux, MacOS) using:
   - `start/Start-Process` for Windows
   - `xdg-open` for Linux (either native or bundled)
   - `open` for MacOS
@@ -77,7 +77,7 @@ npm i '@igor.dvlpr/open-resource'
 
 ## ✨ Examples
 
-`example.ts`
+`example.mts`
 ```ts
 import {  } from '@igor.dvlpr/open-resource'
 

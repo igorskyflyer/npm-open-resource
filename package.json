@@ -1,7 +1,7 @@
 {
-    "name": "@igor.dvlpr/$pkg",
+    "name": "@igor.dvlpr/open-resource",
     "version": "1.0.0",
-    "description": "$desc",
+    "description": "📂 Opens a given resource (URL, file, etc.) via the default OS handler. 🔎",
     "sideEffects": false,
     "engines": {
         "node": ">=20.0"
@@ -9,30 +9,48 @@
     "types": "./dist/index.d.mts",
     "main": "./dist/index.mjs",
     "module": "./dist/index.mjs",
-    "files": ["./dist"],
+    "files": ["dist"],
     "scripts": {
         "build": "tsc",
         "test": "vitest --run",
-        "debug": "vitest",
+        "debug": "tsc --sourceMap --watch",
         "pub": "npm test && npm run build && npm publish --access public"
     },
-    "keywords": [$tags, "igorskyflyer", "igor.dvlpr"],
+    "keywords": [
+        "open",
+        "file",
+        "url",
+        "http",
+        "https",
+        "browser",
+        "resource",
+        "os",
+        "windows",
+        "linux",
+        "macos",
+        "igorskyflyer",
+        "igor.dvlpr"
+    ],
     "license": "MIT",
     "author": "Igor Dimitrijević <igor.dvlpr@gmail.com> (https://github.com/igorskyflyer)",
     "funding": "https://ko-fi.com/igorskyflyer",
-    "homepage": "https://github.com/igorskyflyer/$repo",
+    "homepage": "https://github.com/igorskyflyer/npm-open-resource",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/igorskyflyer/$repo.git"
+        "url": "git+https://github.com/igorskyflyer/npm-open-resource.git"
     },
     "bugs": {
-        "url": "https://github.com/igorskyflyer/$repo/issues"
+        "url": "https://github.com/igorskyflyer/npm-open-resource/issues"
     },
     "devDependencies": {
         "@biomejs/biome": "^1.8.3",
-        "@igor.dvlpr/biome-config-igorskyflyer": "^1.0.2",
+        "@igor.dvlpr/biome-config-igorskyflyer": "^1.0.3",
         "@types/node": "^20.14.13",
         "typescript": "^5.5.4",
-        "vitest": "^2.0.4"
+        "vitest": "^2.0.5"
+    },
+    "dependencies": {
+        "@igor.dvlpr/magic-string": "^1.0.0",
+        "@igor.dvlpr/simple-exec": "^2.0.0"
     }
 }

@@ -2,7 +2,12 @@
 
 import { MagicString } from '@igor.dvlpr/magic-string'
 import { type ExecResult, executeSync } from '@igor.dvlpr/simple-exec'
-import { type SpawnSyncReturns, spawnSync } from 'node:child_process'
+import {
+  type ChildProcessWithoutNullStreams,
+  type SpawnSyncReturns,
+  spawn,
+  spawnSync
+} from 'node:child_process'
 import { platform } from 'node:os'
 
 interface ICommandOptions {
@@ -59,14 +64,10 @@ function applyOptions(options?: IOptions): IOptions {
   }
 }
 
-/**
- * Opens a specified resource synchronously using the appropriate command for the current platform.
- *
- * @param resource - The resource to be opened, a path, URL, etc. Must be a non-empty string.
- * @param options - Optional configuration for the command execution.
- * @throws Throws an error if no resource is specified, if the arguments are invalid, or an error occurs during execution.
- */
-export function openSync(resource: string, options?: IOptions): void {
+function prepareOpen(
+  resource: string,
+  options?: IOptions
+): { command: string; args?: string[] } {
   if (typeof resource !== 'string' || resource.length === 0) {
     throw new Error('No resource specified.')
   }
@@ -82,7 +83,20 @@ export function openSync(resource: string, options?: IOptions): void {
 
   command.append(openCommand).append(resource)
 
-  const process: SpawnSyncReturns<string> = spawnSync(command.value, args, {
+  return { command: command.value, args }
+}
+
+/**
+ * Opens a specified resource synchronously using the appropriate command for the current platform.
+ *
+ * @param resource - The resource to be opened, a path, URL, etc. Must be a non-empty string.
+ * @param options - Optional configuration for the command execution.
+ * @throws Throws an error if no resource is specified, if the arguments are invalid, or an error occurs during execution.
+ */
+export function openSync(resource: string, options?: IOptions): void {
+  const { command, args } = prepareOpen(resource, options)
+
+  const process: SpawnSyncReturns<string | Buffer> = spawnSync(command, args, {
     encoding: 'utf-8',
     shell: true
   })
@@ -99,6 +113,27 @@ export function openSync(resource: string, options?: IOptions): void {
  * @param options - Optional configuration for the command execution.
  * @throws Throws an error if no resource is specified, if the arguments are invalid, or an error occurs during execution.
  */
-export async function open(resource: string): Promise<void> {
-  Promise.resolve(openSync(resource))
+export async function open(
+  resource: string,
+  options?: IOptions
+): Promise<void> {
+  const { command, args } = prepareOpen(resource, options)
+
+  return new Promise<void>((resolve, reject) => {
+    const process: ChildProcessWithoutNullStreams = spawn(command, args, {
+      shell: true
+    })
+
+    process.once('error', (err: Error) => {
+      reject(err)
+    })
+
+    process.once('close', (code: number | null) => {
+      if (code === 0) {
+        resolve()
+      } else {
+        reject(new Error(`Process exited with code ${code}.`))
+      }
+    })
+  })
 }

@@ -9,6 +9,8 @@ import {
   spawnSync
 } from 'node:child_process'
 import { platform } from 'node:os'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 interface ICommandOptions {
   /**
@@ -45,7 +47,12 @@ function getOpenCommand(options?: ICommandOptions): string {
         return 'xdg-open'
       }
 
-      return 'sh ./xdg-open'
+      const localXdg: string = path.join(
+        path.dirname(fileURLToPath(import.meta.url)),
+        'xdg-open'
+      )
+
+      return `sh ${localXdg}`
     }
     case 'darwin':
       return 'open'

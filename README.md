@@ -66,15 +66,7 @@
 
 ## 🕵🏼 Usage
 
-> [!WARNING]
-> This module requires that the [`git`](https://git-scm.com) executable is installed and available in the system path.
->
-> If not, it needs to be installed first.
->
-
-<br>
-
-Install the module by executing:
+Install it by executing:
 
 ```shell
 npm i '@igor.dvlpr/open-resource'

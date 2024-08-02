@@ -9,7 +9,7 @@
     "types": "./dist/index.d.mts",
     "main": "./dist/index.mjs",
     "module": "./dist/index.mjs",
-    "files": ["dist"],
+    "files": ["dist", "xdg-open"],
     "scripts": {
         "build": "tsc",
         "test": "vitest --run",

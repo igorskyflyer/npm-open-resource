@@ -1,6 +1,6 @@
 {
     "name": "@igor.dvlpr/open-resource",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "📂 Opens a given resource (URL, file, etc.) via the default OS handler. 🔎",
     "sideEffects": false,
     "engines": {

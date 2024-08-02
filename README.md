@@ -66,6 +66,10 @@
 
 ## 🕵🏼 Usage
 
+This module requires that the [`git`](https://git-scm.com) executable to be installed and available in the system path.
+
+<br>
+
 Install it by executing:
 
 ```shell
@@ -156,7 +160,7 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 [@igor.dvlpr/regkeys](https://www.npmjs.com/package/@igor.dvlpr/regkeys)
 
-> _📚 An np*m package for fetching Windows registry keys. 🗝_
+> _📚 An npm package for fetching Windows registry keys. 🗝_
 
 <br>
 

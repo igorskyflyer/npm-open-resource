@@ -49,6 +49,7 @@ function getOpenCommand(options?: ICommandOptions): string {
 
       const localXdg: string = path.join(
         path.dirname(fileURLToPath(import.meta.url)),
+        '..',
         'xdg-open'
       )
 

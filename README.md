@@ -66,7 +66,7 @@
 
 ## 🕵🏼 Usage
 
-This module requires that the [`git`](https://git-scm.com) executable to be installed and available in the system path.
+This module requires that the [`git`](https://git-scm.com) executable is installed and available in the system path.
 
 <br>
 

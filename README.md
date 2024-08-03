@@ -55,7 +55,7 @@
 
 ## 🤖 Features
 
-- 💻 cross-platform for **Windows**, **macOS**, **Linux** and **Android** using:
+- 💻 cross-platform, for **Windows**, **macOS**, **Linux** and **Android** using:
   - [`start`](https://ss64.com/nt/start.html)/[`Start-Process`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/start-process) for **Windows**
   - [`xdg-open`](https://gitlab.freedesktop.org/xdg/xdg-utils/-/blob/master/scripts/xdg-open.in) for **Linux** (either native or bundled) and **Android** (alias of [`termux-open`](https://github.com/termux/termux-tools/blob/master/scripts/termux-open.in))
   - [`open`](https://ss64.com/mac/open.html) for **macOS**  

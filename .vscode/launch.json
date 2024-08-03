@@ -7,7 +7,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/dist/index.mjs",
             "outFiles": ["${workspaceFolder}/dist/**/*.mjs"],
-            "preLaunchTask": "debug"
+            "preLaunchTask": "dev"
         }
     ]
 }

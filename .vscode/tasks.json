@@ -2,9 +2,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "debug",
+            "label": "dev",
             "type": "shell",
-            "command": "npm run debug",
+            "command": "npm run dev",
             "isBackground": true,
             "problemMatcher": "$tsc-watch"
         }

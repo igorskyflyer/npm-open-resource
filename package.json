@@ -45,12 +45,12 @@
     "devDependencies": {
         "@biomejs/biome": "^1.8.3",
         "@igor.dvlpr/biome-config-igorskyflyer": "^1.0.3",
-        "@types/node": "^20.14.13",
+        "@types/node": "^20.14.14",
         "typescript": "^5.5.4",
         "vitest": "^2.0.5"
     },
     "dependencies": {
-        "@igor.dvlpr/magic-string": "^1.0.0",
+        "@igor.dvlpr/magic-string": "^1.1.0",
         "@igor.dvlpr/simple-exec": "^2.0.0"
     }
 }

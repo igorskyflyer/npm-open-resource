@@ -58,10 +58,12 @@ function getOpenCommand(options?: ICommandOptions): string {
     case 'darwin':
       return 'open'
     case 'android': {
-      // the only way to use Node on Android
-      // is using Termux, which provides
-      // its own xdg-open (alias of termux-open)
-      // https://github.com/termux/termux-tools/blob/master/scripts/termux-open.in
+      /**
+       * The only way to use Node on Android
+       * is using Termux, which provides
+       * its own xdg-open (alias of termux-open)
+       * @see https://github.com/termux/termux-tools/blob/master/scripts/termux-open.in
+       */
       return 'xdg-open'
     }
     default:

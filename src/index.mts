@@ -57,6 +57,13 @@ function getOpenCommand(options?: ICommandOptions): string {
     }
     case 'darwin':
       return 'open'
+    case 'android': {
+      // the only way to use Node on Android
+      // is using Termux, which provides
+      // its own xdg-open (alias of termux-open)
+      // https://github.com/termux/termux-tools/blob/master/scripts/termux-open.in
+      return 'xdg-open'
+    }
     default:
       throw new Error('Not supported on the host OS.')
   }
@@ -68,7 +75,7 @@ function applyOptions(options?: IOptions): IOptions {
   }
 }
 
-function prepareOpen(
+function prepareCommand(
   resource: string,
   options?: IOptions
 ): { command: string; args?: string[] } {
@@ -98,15 +105,15 @@ function prepareOpen(
  * @throws Throws an error if no resource is specified, if the arguments are invalid, or an error occurs during execution.
  */
 export function openSync(resource: string, options?: IOptions): void {
-  const { command, args } = prepareOpen(resource, options)
+  const { command, args } = prepareCommand(resource, options)
 
   const process: SpawnSyncReturns<string | Buffer> = spawnSync(command, args, {
     encoding: 'utf-8',
     shell: true
   })
 
-  if (process.error) {
-    throw process.error
+  if (process.stderr) {
+    throw new Error(process.stderr.toString())
   }
 }
 
@@ -121,7 +128,7 @@ export async function open(
   resource: string,
   options?: IOptions
 ): Promise<void> {
-  const { command, args } = prepareOpen(resource, options)
+  const { command, args } = prepareCommand(resource, options)
 
   return new Promise<void>((resolve, reject) => {
     const process: ChildProcessWithoutNullStreams = spawn(command, args, {

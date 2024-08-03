@@ -50,8 +50,7 @@
 - [Related](#-related)
 - [Author](#-author)
 
-<br>
-<br>
+---
 
 ## 🤖 Features
 
@@ -62,7 +61,7 @@
 - ⏳ both sync and async methods  
 - 📃 supports passing of arguments
 
----
+<br>
 
 ## 🕵🏼 Usage
 

@@ -11,9 +11,9 @@ importers:
       '@igor.dvlpr/magic-string':
         specifier: ^1.1.0
         version: 1.2.0
-      '@igor.dvlpr/simple-exec':
-        specifier: ^2.0.0
-        version: 2.0.0
+      '@igorskyflyer/simple-exec':
+        specifier: ^2.0.1
+        version: 2.0.1
     devDependencies:
       '@biomejs/biome':
         specifier: ^2.2.0
@@ -256,9 +256,9 @@ packages:
     resolution: {integrity: sha512-czEvHQ1fp6Q8Ve38t1OCAuv0ZCb4a19Lqsanljb4vHOp6i9+Q+MjhE7A6ICCm0nXN9SddzWohVP87swM7K5rKQ==}
     engines: {node: '>=20.0'}
 
-  '@igor.dvlpr/simple-exec@2.0.0':
-    resolution: {integrity: sha512-5K0t2IVPBJllqqupaGEXzoN58vMgAfEQY8HjjjNPEqd6j8NzHEK6HRDE4s+QH/Zn4eyx4Bqu7nHcty3InDCEmQ==}
-    engines: {node: '>=20.0'}
+  '@igorskyflyer/simple-exec@2.0.1':
+    resolution: {integrity: sha512-SU1CRcWxp4M9BKQXvdsd7vMpBBtlWq7L4zqGu4JAwqEzwNFqAnIynXE/SINC831WlxkayJuLepa5OU9xn3w+kA==}
+    engines: {node: '>=22.0'}
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
@@ -751,7 +751,7 @@ snapshots:
 
   '@igor.dvlpr/scramble@1.0.1': {}
 
-  '@igor.dvlpr/simple-exec@2.0.0': {}
+  '@igorskyflyer/simple-exec@2.0.1': {}
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 

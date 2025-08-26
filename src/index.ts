@@ -43,6 +43,10 @@ function getOpenCommand(options?: ICommandOptions): string {
     case 'linux': {
       const tryXdg: ExecResult = executeSync('which xdg-open')
 
+      if (tryXdg.error) {
+        throw new Error('Cannot determine if xdg-open is installed.')
+      }
+
       if (tryXdg.output.trim().endsWith('xdg-open')) {
         return 'xdg-open'
       }

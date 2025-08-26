@@ -1,4 +1,7 @@
+<div align="center">
+  <img src="https://raw.githubusercontent.com/igorskyflyer/npm-open-resource/main/media/open-resource.png" alt="Icon of Open Resource" width="256" height="256">
 <h1 align="center">Open Resource</h1>
+</div>
 
 <br>
 
@@ -9,69 +12,58 @@
 <br>
 <br>
 
-<div align="center">
-  <blockquote>
-    <br>
-    <h4>💖 Support further development</h4>
-    <span>I work hard for every project, including this one
-    <br>
-    and your support means a lot to me!
-    <br>
-    <br>
-    Consider buying me a coffee. ☕
-    <br>
-    <strong>Thank you for supporting my efforts! 🙏😊</strong></span>
-    <br>
-    <br>
-    <a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="150"></a>
-    <br>
-    <br>
-    <a href="https://github.com/igorskyflyer"><em>@igorskyflyer</em></a>
-    <br>
-    <br>
-    <br>
-  </blockquote>
-</div>
-
-<br>
-<br>
-
-## 📃 Table of contents
+## 📃 Table of Contents
 
 - [Features](#-features)
 - [Usage](#-usage)
 - [API](#-api)
-  - [IOptions](#ioptions)
-  - [openSync()](#opensyncresource-string-options-ioptions-void)
-  - [open()](#openresource-string-options-ioptions-promisevoid)
-- [Examples](#-examples)
 - [Changelog](#-changelog)
+- [Support](#-support)
 - [License](#-license)
 - [Related](#-related)
 - [Author](#-author)
 
----
+<br>
+<br>
 
 ## 🤖 Features
 
-- 💻 cross-platform, for **Windows**, **macOS**, **Linux** and **Android** using:
-  - [`start`](https://ss64.com/nt/start.html)/[`Start-Process`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/start-process) for **Windows**
-  - [`xdg-open`](https://gitlab.freedesktop.org/xdg/xdg-utils/-/blob/master/scripts/xdg-open.in) for **Linux** (either native or bundled) and **Android** (alias of [`termux-open`](https://github.com/termux/termux-tools/blob/master/scripts/termux-open.in))
-  - [`open`](https://ss64.com/mac/open.html) for **macOS**  
-- ⏳ both sync and async methods  
-- 📃 supports passing of arguments
+- 📂 Opens any file, folder, or URL with the default app on your system
+- ⚡ Works instantly in sync mode for quick, blocking execution
+- ⏳ Runs in async mode so your app can keep going while it opens things
+- 🖥 Adapts automatically to Windows, macOS, Linux, and Android
+- 🛠 Lets you pass extra arguments to fine‑tune how the resource opens
+- 🚫 Gives clear errors if the resource is missing or the platform isn’t supported
 
+<br>
+
+> ℹ️ Uses:
+> - [`start`](https://ss64.com/nt/start.html)/[`Start-Process`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/start-process) for **Windows**
+> - [`xdg-open`](https://gitlab.freedesktop.org/xdg/xdg-utils/-/blob/master/scripts/xdg-open.in) for **Linux** (either native or bundled) and **Android** (alias of [`termux-open`](https://github.com/termux/termux-tools/blob/master/scripts/termux-open.in))
+> - [`open`](https://ss64.com/mac/open.html) for **macOS**  
+>
+
+<br>
 <br>
 
 ## 🕵🏼 Usage
 
-Install it by executing:
+Install it by executing any of the following, depending on your preferred package manager:
 
-```shell
-npm i '@igor.dvlpr/open-resource'
+```bash
+pnpm add @igorskyflyer/open-resource
 ```
 
----
+```bash
+yarn add @igorskyflyer/open-resource
+```
+
+```bash
+npm i @igorskyflyer/open-resource
+```
+
+<br>
+<br>
 
 ## 🤹🏼 API
 
@@ -131,51 +123,65 @@ openSync('https://igorskyflyer.me') // will open the default browser and navigat
 openSync('D:\\Data\\file.txt') // will open the text file in the default text viewer/editor
 ```
 
----
+<br>
+<br>
 
 ## 📝 Changelog
 
-📑 The changelog is available here: [CHANGELOG.md](https://github.com/igorskyflyer/npm-open-resource/blob/main/CHANGELOG.md).
+📑 The changelog is available here, [CHANGELOG.md](https://github.com/igorskyflyer/npm-open-resource/blob/main/CHANGELOG.md).
 
----
+<br>
+<br>
 
 ## 🪪 License
 
-Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/npm-open-resource/blob/main/LICENSE).
+Licensed under the MIT license which is available here, [MIT license](https://github.com/igorskyflyer/npm-open-resource/blob/main/LICENSE.txt).
 
----
+<br>
+<br>
+
+## 💖 Support
+
+<div align="center">
+  I work hard for every project, including this one and your support means a lot to me!
+  <br>
+  Consider buying me a coffee. ☕
+  <br>
+  <br>
+  <a href="https://ko-fi.com/igorskyflyer" target="_blank"><img src="https://raw.githubusercontent.com/igorskyflyer/igorskyflyer/main/assets/ko-fi.png" alt="Donate to igorskyflyer" width="180" height="46"></a>
+  <br>
+  <br>
+  <em>Thank you for supporting my efforts!</em> 🙏😊
+</div>
+
+<br>
+<br>
 
 ## 🧬 Related
 
-[@igor.dvlpr/registry-apppaths](https://www.npmjs.com/package/@igor.dvlpr/registry-apppaths)
+[]()
 
-> _🪀 A Node.js module for reading the AppPaths registry key on Windows. Useful for retrieving applications that can be launched from the command prompt. 🗃_
+> __
 
-<br>
+[]()
 
-[@igor.dvlpr/regkeys](https://www.npmjs.com/package/@igor.dvlpr/regkeys)
+> __
 
-> _📚 An npm package for fetching Windows registry keys. 🗝_
+[]()
 
-<br>
+> __
 
-[@igor.dvlpr/upath](https://www.npmjs.com/package/@igor.dvlpr/upath)
+[]()
 
-> _🎍 Provides a universal way of formatting file-paths in Unix-like and Windows operating systems as an alternative to the built-in path.normalize(). 🧬_
+> __
 
-<br>
+[]()
 
-[@igor.dvlpr/windows-packages](https://www.npmjs.com/package/@igor.dvlpr/windows-packages)
-
-> _💻 A Node.js module for reading the Packages registry key on Windows 10+. Useful for retrieving Windows 10+ installed Store applications. 📦_
+> __
 
 <br>
-
-[@igor.dvlpr/scrollend-polyfill](https://www.npmjs.com/package/@igor.dvlpr/scrollend-polyfill)
-
-> _🛴 A performant and light (< 1.5KB) JavaScript polyfill for the scrollend Event. ⛸️_
-
----
+<br>
+<br>
 
 ## 👨🏻‍💻 Author
 Created by **Igor Dimitrijević** ([*@igorskyflyer*](https://github.com/igorskyflyer/)).

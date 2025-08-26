@@ -31,4 +31,8 @@ describe('🧪 Open Resource tests 🧪', () => {
       open('https://github.com/igorskyflyer/npm-open-resource')
     ).resolves.toBeUndefined()
   }) // #6
+
+  it('#7 should open the file', async () => {
+    await expect(open('./test/test.txt')).resolves.toBeUndefined()
+  }) // #7
 })

@@ -1,7 +1,7 @@
 // Author: Igor Dimitrijević (@igorskyflyer)
 
 import { MagicString } from '@igor.dvlpr/magic-string'
-import { type ExecResult, executeSync } from '@igor.dvlpr/simple-exec'
+import { type ExecResult, executeSync } from '@igorskyflyer/simple-exec'
 import {
   type ChildProcessWithoutNullStreams,
   type SpawnSyncReturns,

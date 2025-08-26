@@ -1,7 +1,7 @@
 // Author: Igor Dimitrijević (@igorskyflyer)
 
 import { describe, expect, it } from 'vitest'
-import { open, openSync } from '../src/index.mts'
+import { open, openSync } from '../src/index.ts'
 
 describe('🧪 Open Resource tests 🧪', () => {
   it('#1 should throw', () => {
@@ -17,17 +17,17 @@ describe('🧪 Open Resource tests 🧪', () => {
     expect(openSync('https://igorskyflyer.me')).toBeUndefined()
   }) // #3
 
-  it('#4 should throw', () => {
+  it('#4 should throw', async () => {
     // @ts-expect-error
-    expect(() => open()).rejects.toThrowError()
+    await expect(async () => await open()).rejects.toThrowError()
   }) // #4
 
-  it('#5 should throw', () => {
-    expect(() => open('')).rejects.toThrowError()
+  it('#5 should throw', async () => {
+    await expect(async () => await open('')).rejects.toThrowError()
   }) // #5
 
-  it('#6 should not throw', () => {
-    expect(
+  it('#6 should not throw', async () => {
+    await expect(
       open('https://github.com/igorskyflyer/npm-open-resource')
     ).resolves.toBeUndefined()
   }) // #6

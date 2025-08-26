@@ -116,7 +116,7 @@ Throws an error if no resource is specified, if the arguments are invalid, or an
 
 `example.mts`
 ```ts
-import { openSync } from '@igor.dvlpr/open-resource'
+import { openSync } from '@igorskyflyer/open-resource'
 
 openSync('https://igorskyflyer.me') // will open the default browser and navigate to the site
 
@@ -159,25 +159,33 @@ Licensed under the MIT license which is available here, [MIT license](https://gi
 
 ## 🧬 Related
 
-[]()
+[@igorskyflyer/registry-apppaths](https://www.npmjs.com/package/@igorskyflyer/registry-apppaths)
 
-> __
+> _🪀 A Node.js module for reading the AppPaths registry key on Windows. Useful for retrieving applications that can be launched from the command prompt. 🗃_
 
-[]()
+<br>
 
-> __
+[@igorskyflyer/regkeys](https://www.npmjs.com/package/@igorskyflyer/regkeys)
 
-[]()
+> _📚 An npm package for fetching Windows registry keys. 🗝_
 
-> __
+<br>
 
-[]()
+[@igorskyflyer/upath](https://www.npmjs.com/package/@igorskyflyer/upath)
 
-> __
+> _🎍 Provides a universal way of formatting file-paths in Unix-like and Windows operating systems as an alternative to the built-in path.normalize(). 🧬_
 
-[]()
+<br>
 
-> __
+[@igorskyflyer/windows-packages](https://www.npmjs.com/package/@igorskyflyer/windows-packages)
+
+> _💻 A Node.js module for reading the Packages registry key on Windows 10+. Useful for retrieving Windows 10+ installed Store applications. 📦_
+
+<br>
+
+[@igorskyflyer/scrollend-polyfill](https://www.npmjs.com/package/@igorskyflyer/scrollend-polyfill)
+
+> _🛴 A performant and light (< 1.5KB) JavaScript polyfill for the scrollend Event. ⛸️_
 
 <br>
 <br>

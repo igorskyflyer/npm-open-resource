@@ -18,7 +18,7 @@
     "scripts": {
         "build": "tsc",
         "test": "vitest --run",
-        "pub": "npm test && npm run build && npm publish --access public"
+        "pub": "pnpm test && git push origin main --tags"
     },
     "keywords": [
         "open",
@@ -55,5 +55,9 @@
     "dependencies": {
         "@igor.dvlpr/magic-string": "^1.1.0",
         "@igorskyflyer/simple-exec": "^2.0.1"
-    }
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "packageManager": "pnpm@10.15.0"
 }
